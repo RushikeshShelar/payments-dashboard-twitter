@@ -2,14 +2,19 @@ import { IndianRupeeIcon } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";
-import MainTable from "./components/main-table";
+import { OrderClient } from "./components/client";
 
 
 
 
 const DashboardPage = ({
 }) => {
-
+    const data = [ {
+        id: "#1432",
+        date: "12/12/2021",
+        amount: "23,000",
+        fees: "100"
+    }]
 
     return (
         <div className="flex-col">
@@ -45,7 +50,7 @@ const DashboardPage = ({
 
                 </div>
                 <Heading title="Transactions | This Month" />
-                <MainTable />
+                <OrderClient orders={data} />
             </div>
         </div>
     )
